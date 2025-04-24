@@ -21,10 +21,39 @@ function addBookToLibrary(title, author, pages, read) {
 addBookToLibrary('Titolo', 'Autore', 20, 'letto');
 addBookToLibrary('Titolo2', 'Autore2', 202, 'non letto');
 
-console.log(myLibrary);
-
 for (let item of myLibrary) {
-    let newpar = document.createElement('p');
-    newpar.textContent = `${item.title}, ${item.author}, ${item.pages}, ${item.read}, ${item.id}`;
-    document.body.appendChild(newpar);
-}
+    let card = document.createElement('div');
+    card.setAttribute('id', `${item.id}`)
+    let title = document.createElement('h2');
+    title.textContent = `${item.title}`;
+    let author = document.createElement('h3');
+    author.textContent = `${item.author}`;
+    card.appendChild(author);
+    card.appendChild(title);
+    card.setAttribute('class', 'card');
+    let cardContainer = document.querySelector('.card-container');
+    cardContainer.appendChild(card);
+};
+
+const cards = document.querySelectorAll('.card');
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+        const cardId = card.getAttribute('id');
+        const newArrCurrentObj = myLibrary.filter(function(el) {
+            return el.id == cardId;
+        });
+        const info = document.querySelector('.info-container');
+        const author = document.querySelector('.author');
+        author.textContent = `Autore: ${newArrCurrentObj[0].author}`;
+        info.appendChild(author);        
+        const title = document.querySelector('.title');
+        title.textContent = `Titolo: ${newArrCurrentObj[0].title}`;
+        info.appendChild(title);
+        const pages = document.querySelector('.pages');
+        pages.textContent = `Pagine: ${newArrCurrentObj[0].pages}`;
+        info.appendChild(pages);
+        const read = document.querySelector('.read');
+        read.textContent = `Stato: ${newArrCurrentObj[0].read}`;
+        info.appendChild(read);
+    });
+});
