@@ -78,7 +78,7 @@ function createCard(obj) {
         
     iconSvgTrash.setAttribute('fill', 'brown');
     iconSvgTrash.setAttribute('viewBox', '0 0 24 24');
-    iconSvgTrash.setAttribute('height', '2.5em');
+    iconSvgTrash.setAttribute('height', '2em');
     iconSvgTrash.setAttribute('class', 'remove-book');
 
     iconPathTrash.setAttribute('d', 'M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M9,8H11V17H9V8M13,8H15V17H13V8Z')
@@ -90,7 +90,7 @@ function createCard(obj) {
 
     iconSvgInfo.setAttribute('fill', 'brown');
     iconSvgInfo.setAttribute('viewBox', '0 0 24 24');
-    iconSvgInfo.setAttribute('height', '2.5em');
+    iconSvgInfo.setAttribute('height', '2em');
     iconSvgInfo.setAttribute('class', 'info');
 
     iconPathInfo.setAttribute('d', 'M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z');

@@ -130,12 +130,16 @@ input[type=radio] {
 }
 
 .card-container {
+    overflow-y: scroll;
+    scrollbar-color: var(--header-color) bisque;
+    scrollbar-width: thin;
     padding: 1.5em;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background-color:antiquewhite;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: max-content;
     gap: 1.5em;
     align-items: start;
 }
@@ -162,6 +166,7 @@ input[type=radio] {
 .card h2,
 .card h3 {
     margin: 0;
+    text-align: center;
 }
 
 .card h3 {
