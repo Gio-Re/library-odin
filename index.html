@@ -40,21 +40,17 @@
                 </div>
                 <div>
                     <label for="pages">Numero di Pagine:</label>
-                    <input type="tel" name="pages" id="pages" required>
+                    <input type="tel" name="pages" id="pages" pattern="\+?[0-9]*" required>
                 </div>
                 <fieldset>
                     <legend>Stato lettura:</legend>
                     <div>
-                        <input type="radio" name="read" id="read" value="letto" >
+                        <input type="radio" name="read" id="read" value="letto" required>
                         <label for="read">Letto</label>
                     </div>
                     <div>
                         <input type="radio" name="read" id="not-read" value="non letto">
                         <label for="not-read">Non Letto</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="read" id="reading" value="lettura in corso">
-                        <label for="reading">Lettura in corso</label>
                     </div>
                 </fieldset>
                 <button class="add-to-list">Aggiungi</button>

@@ -169,10 +169,11 @@ input[type=radio] {
     color: var(--gray-text);
 }
 
-.deleteBtn {
-    border: none;
-    background-color: transparent;
+.icons {
     align-self: flex-end;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
 }
 
 .book-info {
@@ -194,4 +195,18 @@ input[type=radio] {
     justify-content: space-evenly;
     font-size: 2em;
     color: var(--gray-text);
+}
+
+.read {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.toggleRead {
+    border: none;
+    border-radius: 1em;
+    color:brown;
+    background-color: var(--header-color);
+    align-self: center;
 }
